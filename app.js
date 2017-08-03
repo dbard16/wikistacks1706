@@ -4,6 +4,9 @@ const bodyParser = require('body-parser');
 const nunjucks = require('nunjucks');
 const path = require('path');
 const models = require('./models');
+const routes = require('./routes');
+
+console.log('routes = ', routes)
 
 const app = express();
 const port = process.env.PORT || 3000;
