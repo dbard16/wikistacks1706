@@ -20,8 +20,11 @@ app.use('/', morgan('combined'));
 app.get('/', (req, res, next)=>res.render('index'));
 
 
-
-
-app.listen(port, ()=>{
-  console.log(`Listening on port ${port}`);
+models.db.sync({force: true})
+.then(()=>{
+  app.listen(port, ()=>{
+    console.log(`Listening on port ${port}`);
+  });
 });
+
+
