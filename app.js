@@ -32,4 +32,7 @@ models.db.sync({force: true})
   });
 });
 
+app.use((err, req, res, next) => {
+  next(err)
+});
 
