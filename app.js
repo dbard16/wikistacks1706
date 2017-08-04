@@ -20,7 +20,9 @@ app.engine('html', nunjucks.render);
 app.use(express.static('public'));
 app.set('views', path.join(__dirname, 'views'));
 app.use('/', morgan('combined'));
-app.get('/', (req, res, next)=>res.render('index'));
+
+
+app.use('/', routes);
 
 
 models.db.sync({force: true})
