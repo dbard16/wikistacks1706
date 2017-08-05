@@ -17,8 +17,7 @@ router.post('/', function(req, res, next) {
 
   page.save()
   .then((result)=>{
-  	console.log('result = ', result.route)
-    res.json(result.dataValues);
+  	res.redirect(result.route);
   })
   .catch((error)=>console.log(error))
 

@@ -25,7 +25,7 @@ app.use('/', morgan('combined'));
 app.use('/', routes);
 
 
-models.db.sync({force: true})
+models.db.sync()
 .then(()=>{
   app.listen(port, ()=>{
     console.log(`Listening on port ${port}`);
