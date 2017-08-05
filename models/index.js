@@ -48,7 +48,7 @@ var Page = db.define('page', {
 
     getterMethods: {
         route() {
-            return '/wiki/' + urlTitle
+            return '/wiki/' + Page.urlTitle
         }
     }
 });
